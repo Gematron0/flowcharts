@@ -58,8 +58,24 @@ def creatReasonQuickForm():
 def saveDatoForReasons(DefaltReasonList, DefaltQuckReaosonList, CreRaas, CreRaasFoQui):
     print(Fore.BLACK+Back.YELLOW+"SAVING DATA...")
     print(Fore.BLACK+Back.YELLOW+"DO NOT TURN OF THE MECHEN AS THIS CAN LEAD TO CURRUPTION")
-    DefaltReasonList.append(CreRaas)
-    DefaltQuckReaosonList.append(CreRaasFoQui)
+    x = 0
+    q = -1
+    for i in DefaltReasonList:
+        q = q + 1
+        if CreRaas == i:
+            x = x + 1
+    q = -1
+    for i in DefaltQuckReaosonList:
+        q = q + 1
+        if CreRaasFoQui == 1:
+            x = x + 1
+    if x == 0:
+        DefaltReasonList.append(CreRaas)
+        DefaltQuckReaosonList.append(CreRaasFoQui)
+    else:
+        print(Fore.RED+"this code cant be saved dew to one or multipul simulariteys")
+        print(Fore.RED+"code will reset after 3 seconds")
+        time.sleep(3)
     return DefaltReasonList, DefaltQuckReaosonList
 
 ### removes data form a list ###

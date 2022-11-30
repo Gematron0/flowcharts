@@ -44,4 +44,3 @@ def inputSystem(totInputsFrunt, TotInputsBack, Part):
         print (Fore.BLUE+"###################################")
         inp = input (Fore.BLUE+"enter your input: ") 
         return inp
-        

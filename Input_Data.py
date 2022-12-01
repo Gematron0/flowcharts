@@ -32,6 +32,9 @@ def storredValues(selector,value):
     if selector == 6:
         ReasonForInput = value
         return
+        
+    if selector == 7:
+        return(UpOrDown, moneyAmmount, WhatDay, WhatMonth, WhatYear, ReasonForInput)
 
 ### asks the used if its an + or - entry ###
 def posOrNegEntry():
@@ -152,7 +155,7 @@ def reasonOfInput(DefaltReasonList, DefaltQuckReaosonList):
             print("your varable:",inp,"dosent exsist,do you wish to creat a new one or retype the data")
             inputSystem(1, 1, 1)
             print(Fore.GREEN+"===================================")
-            print ("do you wish to creat a new defalt varable")
+            print ("do you wish to creat a new defalt varable (Y, n)")
             print(Fore.GREEN+"===================================")
             inputSystem(1, 1, 2)
             inp = inputSystem(0, 0, 3)
@@ -166,3 +169,21 @@ def reasonOfInput(DefaltReasonList, DefaltQuckReaosonList):
                 clearConsole()
             else:
                 resetOptions()
+
+def checkingData():
+    moneyAmmountCheck = False
+    clearConsole()
+    inputSystem(7, 2, 1)
+    print(Fore.GREEN+"===================================")
+    print("checking that imputed data for flaws")
+    print(Fore.GREEN+"===================================")
+    inputSystem(7, 2, 2)
+    UpOrDown, moneyAmmount, WhatDay, WhatMonth, WhatYear, ReasonForInput = storredValues(7)
+    print("checking for pos and neg entry")
+    if moneyAmmount <= 0:
+        moneyAmmountCheck = True
+    elif moneyAmmount >= 1000:
+        moneyAmmountCheck = True
+        
+    
+        

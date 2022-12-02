@@ -1,3 +1,4 @@
+from CheckData import checkMonths,  minMaxMoney
 from GUI_Scripts import inputSystem, resetOptions, clearConsole
 from Defalt_Reasons import creatReasons,creatReasonQuickForm, saveDatoForReasons
 
@@ -170,8 +171,10 @@ def reasonOfInput(DefaltReasonList, DefaltQuckReaosonList):
             else:
                 resetOptions()
 
+### starts to check if any of the data imputed is wrong or not allowed ###
 def checkingData():
     moneyAmmountCheck = False
+    WhatMonthCheck = False
     clearConsole()
     inputSystem(7, 2, 1)
     print(Fore.GREEN+"===================================")
@@ -180,10 +183,9 @@ def checkingData():
     inputSystem(7, 2, 2)
     UpOrDown, moneyAmmount, WhatDay, WhatMonth, WhatYear, ReasonForInput = storredValues(7)
     print("checking for pos and neg entry")
-    if moneyAmmount <= 0:
-        moneyAmmountCheck = True
-    elif moneyAmmount >= 1000:
-        moneyAmmountCheck = True
-        
+
+    moneyAmmountCheck = minMaxMoney(3, moneyAmmount)
     
-        
+    WhatMonthCheck = checkMonths(WhatMonth)
+
+    

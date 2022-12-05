@@ -2,8 +2,36 @@ import os
 import colorama
 from colorama import Fore, Back
 import time
-colorama.init(autoreset=True)
+colorama.init(autoreset=True)#
 
+def staderdiseMonths(WhatMonth):
+    if WhatMonth == "1" or WhatMonth == "01" or WhatMonth == "Jan" or WhatMonth == "Janary" or WhatMonth == "jan" or WhatMonth == "janary":
+        return("01")
+    elif WhatMonth == "2" or WhatMonth == "02" or WhatMonth == "Feb" or WhatMonth == "February" or WhatMonth == "feb" or WhatMonth == "february":
+        return("02")
+    elif WhatMonth == "3" or WhatMonth == "03" or WhatMonth == "Mar" or WhatMonth == "March" or WhatMonth == "mar" or WhatMonth == "march":
+        return("03")
+    elif WhatMonth == "4" or WhatMonth == "04" or WhatMonth == "Apr" or WhatMonth == "April" or WhatMonth == "apr" or WhatMonth == "april":
+        return("04")
+    elif WhatMonth == "5" or WhatMonth == "05" or WhatMonth == "May" or WhatMonth == "May" or WhatMonth == "may" or WhatMonth == "may":
+        return("05")   
+    elif WhatMonth == "6" or WhatMonth == "06" or WhatMonth == "Jun" or WhatMonth == "June" or WhatMonth == "jun" or WhatMonth == "june":    
+        return("06")  
+    elif WhatMonth == "7" or WhatMonth == "07" or WhatMonth == "Jul" or WhatMonth == "July" or WhatMonth == "jul" or WhatMonth == "july":
+        return("07")
+    elif WhatMonth == "8" or WhatMonth == "08" or WhatMonth == "Aug" or WhatMonth == "August" or WhatMonth == "aug" or WhatMonth == "august":
+        return("08")
+    elif WhatMonth == "9" or WhatMonth == "09" or WhatMonth == "Sep" or WhatMonth == "September" or WhatMonth == "sep" or WhatMonth == "september":
+        return("09")
+    elif WhatMonth == "10" or WhatMonth == "10" or WhatMonth == "Oct" or WhatMonth == "October" or WhatMonth == "oct" or WhatMonth == "october":
+        return("10")
+    elif WhatMonth == "11" or WhatMonth == "11" or WhatMonth == "May" or WhatMonth == "November" or WhatMonth == "nov" or WhatMonth == "november":
+        return("11")   
+    elif WhatMonth == "12" or WhatMonth == "12" or WhatMonth == "Dec" or WhatMonth == "December" or WhatMonth == "dec" or WhatMonth == "december":    
+        return("12")
+    else:
+        return("00")  
+    
 def checkMonths(WhatMonth):
     if WhatMonth == "1" or WhatMonth == "2" or WhatMonth == "3" or WhatMonth == "4" or WhatMonth == "5" or WhatMonth == "6" or WhatMonth == "7" or WhatMonth == "8" or WhatMonth == "9" or WhatMonth == "10" or WhatMonth == "11":
         return (True)

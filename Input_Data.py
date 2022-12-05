@@ -1,4 +1,4 @@
-from CheckData import checkMonths,  minMaxMoney
+from CheckData import checkMonths,  minMaxMoney, staderdiseMonths
 from GUI_Scripts import inputSystem, resetOptions, clearConsole
 from Defalt_Reasons import creatReasons,creatReasonQuickForm, saveDatoForReasons
 
@@ -186,6 +186,10 @@ def checkingData():
 
     moneyAmmountCheck = minMaxMoney(3, moneyAmmount)
     
-    WhatMonthCheck = checkMonths(WhatMonth)
+    WhatMonth = staderdiseMonths(WhatMonth)
+    if WhatMonth != "00":
+        print ("Month is not a valid input")
+    else:
+        WhatMonthCheck = checkMonths(WhatMonth)
 
     

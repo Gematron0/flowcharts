@@ -58,3 +58,77 @@ def minMaxMoney(type, moneyAmmount):
             return(True)
         else:
             return(False)
+
+### looks at the month people have inputed and the ammount of dayes there is inside the input ###
+def checkDay(WhatDay, WhatMonth):
+    if WhatMonth == "01":
+        if WhatDay >= 0 and WhatDay <= 31:
+            return(True)
+        else:
+            return(False)
+    
+    if WhatMonth == "02":
+        if WhatDay >= 0 and WhatDay <= 28:
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "03":
+        if WhatDay >= 0 and WhatDay <= 31:
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "04":
+        if WhatDay >= 0 and WhatDay <= 30:
+            return(True)
+        else:
+            return(False)
+    
+    if WhatMonth == "05":
+        if WhatDay >= 0 and WhatDay <= "31":
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "06":
+        if WhatDay >= 0 and WhatDay <= "30":
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "07":
+        if WhatDay >= 0 and WhatDay <= "31":
+            return(True)
+        else:
+            return(False)
+            
+    if WhatMonth == "08":
+        if WhatDay >= 0 and WhatDay <= "31":
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "09":
+        if WhatDay >= 0 and WhatDay <= "30":
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "10":
+        if WhatDay >= 0 and WhatDay <= "31":
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "11":
+        if WhatDay >= 0 and WhatDay <= "30":
+            return(True)
+        else:
+            return(False)
+
+    if WhatMonth == "12":
+        if WhatDay >= 0 and WhatDay <= "31":
+            return(True)
+        else:
+            return(False)

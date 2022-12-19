@@ -132,3 +132,14 @@ def checkDay(WhatDay, WhatMonth):
             return(True)
         else:
             return(False)
+
+def checkYear(type, Year):
+    if type == 1:
+        MinYearNumber = checkYear
+    if type == 2:
+        MaxYearNumber = checkYear
+    if type == 3:
+        if MinYearNumber >= checkYear and MaxYearNumber <= checkYear:
+            return(True)
+        else:
+            return(False)

@@ -3,7 +3,7 @@ from Input_Data import dayOfInput, reasonOfInput, monthOfInput, yearOfInput, amm
 import GUI_Scripts
 from GUI_Scripts import clearConsole, resetOptions, inputSystem
 import Defalt_Reasons
-from Defalt_Reasons import defaltReasonsSelection, creatReasons, creatReasonQuickForm, saveDatoForReasons, removeDatoForReason
+from Defalt_Reasons import defaltReasonsSelection, creatReasons, creatReasonQuickForm, maxValueSelection, minValueSelection, saveDatoForReasons, removeDatoForReason, settings
 
 import os
 import colorama
@@ -19,6 +19,7 @@ def selectionScreen():
         print ("(01) add a new entry")
         print ("(02) display information")
         print ("(03) add a defalt reason")
+        print ("(04) accses the settings and change them")
         inp = inputSystem(0, 0, 3)
         if inp == "01" or inp == "1":
             return 1
@@ -26,6 +27,8 @@ def selectionScreen():
             return 2
         elif inp == "03" or inp == "3":
             return 3
+        elif inp == "04" or inp == "4":
+            return 4
         else:
             resetOptions()
 
@@ -70,4 +73,13 @@ while True:
             
         elif ReasonSelection == 3:
             selection = 0
-            
+        
+    while selection == 4:
+        section = settings()
+        if section == 1:
+            clearConsole()
+            maxValueSelection()
+        elif section == 2:
+            clearConsole()
+            minValueSelection()
+

@@ -1,4 +1,4 @@
-from CheckData import checkDay, checkMonths,  minMaxMoney, staderdiseMonths
+from CheckData import checkDay, checkMonths,  minMaxMoney, staderdiseMonths, checkYear
 from GUI_Scripts import inputSystem, resetOptions, clearConsole
 from Defalt_Reasons import creatReasons,creatReasonQuickForm, saveDatoForReasons
 
@@ -175,6 +175,7 @@ def reasonOfInput(DefaltReasonList, DefaltQuckReaosonList):
 def checkingData():
     moneyAmmountCheck = False
     WhatMonthCheck = False
+    WhatDayCheck = False
     clearConsole()
     inputSystem(7, 2, 1)
     print(Fore.GREEN+"===================================")
@@ -188,10 +189,14 @@ def checkingData():
     
     WhatMonth = staderdiseMonths(WhatMonth)
     WhatMonthCheck = checkMonths(WhatMonth)
-    checkDay(WhatDay, WhatMonth)
+    WhatDayCheck = checkDay(WhatDay, WhatMonth)
+    checkYear(3, WhatYear)
 
+    if WhatDayCheck == False:
+        print(">> Invalid Day inputed")
 
     if WhatMonth == "00":
         print(">> Invalid Month inputed")
 
-    
+    if moneyAmmountCheck == False:
+        print(">> Invalid Month inputed")

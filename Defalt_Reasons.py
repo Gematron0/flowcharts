@@ -1,3 +1,4 @@
+from CheckData import minMaxMoney
 from GUI_Scripts import inputSystem, resetOptions, clearConsole
 
 import os
@@ -135,3 +136,36 @@ def removeDatoForReason(DefaltReasonList, DefaltQuckReaosonList):
     resetOptions()
     return (DefaltReasonList, DefaltQuckReaosonList)
     
+def settings():
+    inputSystem(1, 4, 1)
+    print(Fore.GREEN+"===================================")
+    print("select what setting you would wish to accses")
+    print("set maximum value for money")
+    print("set minimum value for money")
+    print(Fore.GREEN+"===================================")
+    inputSystem(1, 4, 2)
+    int = inputSystem(0, 0, 3)
+    if int == "1":
+        return(1)
+    elif int == "2":
+        return(2)
+    else:
+        resetOptions()
+
+def maxValueSelection():
+    inputSystem(2, 3, 1)
+    print(Fore.GREEN+"===================================")
+    print("enter value for the maximum value")
+    print(Fore.GREEN+"===================================")
+    inputSystem(2, 3, 2)
+    inp = inputSystem(0, 0, 3)
+    minMaxMoney(1, int(inp))
+
+def minValueSelection():
+    inputSystem(2, 3, 1)
+    print(Fore.GREEN+"===================================")
+    print("enter value for the minimum value")
+    print(Fore.GREEN+"===================================")
+    inputSystem(2, 3, 2)
+    inp = inputSystem(0, 0, 3)
+    minMaxMoney(2, int(inp))

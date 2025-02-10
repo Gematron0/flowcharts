@@ -42,7 +42,7 @@ while True:
     selection = selectionScreen()
     print (selection)
     clearConsole()
-    while selection == 1:
+    if selection == 1:
         posOrNegEntry()
         clearConsole()
         ammouOfMoney()
@@ -56,7 +56,7 @@ while True:
         DefaltReasonList, DefaltQuckReaosonList = reasonOfInput(DefaltReasonList, DefaltQuckReaosonList)
         clearConsole()
 
-    while selection == 3:
+    if selection == 3:
         ReasonSelection = defaltReasonsSelection(DefaltReasonList, DefaltQuckReaosonList)
         clearConsole()
         if ReasonSelection == 1:
@@ -70,11 +70,12 @@ while True:
         elif ReasonSelection == 2:
             DefaltReasonList, DefaltQuckReaosonList = removeDatoForReason(DefaltReasonList, DefaltQuckReaosonList)
             clearConsole()
-            
+
         elif ReasonSelection == 3:
             selection = 0
+
         
-    while selection == 4:
+    if selection == 4:
         section = settings()
         if section == 1:
             clearConsole()
@@ -82,4 +83,6 @@ while True:
         elif section == 2:
             clearConsole()
             minValueSelection()
+
+    selectionScreen()
 
